@@ -14,9 +14,7 @@
         $($Navigation).click(function ()
         {
             var Scroll = $($(this).attr('href')).offset().top - Settings['scroll_shift'];
-
             $('html,body').animate({'scrollTop': Scroll + 'px'}, Settings['duration']);
-
             return false;
         });
 // Backlight
@@ -27,7 +25,6 @@
             Sizes[Key]['id'] = $(Value).attr('href');
             Sizes[Key]['value'] = $(Sizes[Key]['id']).offset().top - Settings['scroll_shift'] - Settings['active_shift'];
             Sizes[Key]['height'] = Sizes[Key]['value'] + $(Sizes[Key]['id']).outerHeight();
-
         });
     };
 })(jQuery);
